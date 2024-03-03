@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+  overflow: hidden;
+  position:sticky;
+  top:0px;
+
+}
+.logo {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.search-container {
+  float: right;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+  background-color: #333;
+  color: #fff;
+}
+
+.search-container button {
+  padding: 10px;
+  margin-top: 8px;
+  background: #333;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 images per row */
+  gap: 20px;
+  padding: 20px;
+}
+
+.content-item {
+  text-align: center;
+  
+}
+
+.content-item img {
+ width:300px;
+ height:300px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribute items evenly */
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.footer-inner div {
+  flex: 2; /* Each div takes equal space */
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.copyright {
+  flex-basis: 100%; /* Take full width */
+  text-align: center;
+  margin-top: 20px; /* Add space between main content and copyright */
+}
+
+/* Header Animation */
+header {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav ul li ,.search-container,.logo{
+  animation: slideIn 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Content Items Animation */
+.content-item {
+  transition: transform 0.3s ease;
+}
+
+.content-item:hover {
+  transform: scale(1.1) rotateY(180deg); /* Example flip and scale on hover */
+}
+
+/* Footer Animation */
+.footer-links a{
+  animation: pulse 1s infinite alternate; /* Example pulsating animation */
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.copyright {
+  animation: bounce 1s infinite alternate; /* Example bounce animation */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* Logo Animation */
+.logo img {
+  animation: pulse 1s infinite alternate; /* Example animation: pulsating */
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+/* Footer Animation */
+.footer-inner div {
+  animation: slideIn 5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
